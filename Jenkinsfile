@@ -17,6 +17,13 @@ pipeline {
                 // Build the Android application
                 sh './gradlew assembleDebug'
             }
+
+              post {
+                        success {
+                                // Archive build artifacts
+                                archiveArtifacts artifacts: '**/*.apk', allowEmptyArchive: true, fingerprint: true
+                            }
+                        }
         }
 
         stage('Test') {
