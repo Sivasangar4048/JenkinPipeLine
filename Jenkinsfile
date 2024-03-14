@@ -29,12 +29,6 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
-            steps {
-                // You can deploy your application to any desired location here
-                // For example, uploading to Google Play Store or distributing the APK file
-            }
-        }
     }
 
     post {
