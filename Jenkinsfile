@@ -35,9 +35,7 @@ pipeline {
                 sh './gradlew connectedAndroidTest'
             }
         }
-                   environment {
-                         PATH = "/usr/local/lib/node_modules/npm/bin:${env.PATH}"
-                   }
+                 
            stage('Distribute') {
                       steps {
                           script {
