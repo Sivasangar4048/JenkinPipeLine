@@ -40,7 +40,7 @@ pipeline {
                       steps {
                           script {
                               // Send the build to Firebase App Distribution
-                              sh "firebase appdistribution:distribute app/build/outputs/apk/debug/app-debug.apk --app 1:484033308624:android:31abfd2405a664abf63bd5 --token '1//0gKSdd-qT-6-jCgYIARAAGBASNwF-L9IrJ1ku29rmy5BghSY9AVsMke0AuOoyx0etVqCHN6ARaSxEXhRECz0t2kfgtRq0W0L7OQA'"
+                              sh "/usr/local/lib/node_modules/firebase-tools appdistribution:distribute app/build/outputs/apk/debug/app-debug.apk --app 1:484033308624:android:31abfd2405a664abf63bd5 --token '1//0gJWcjcxpMtf4CgYIARAAGBASNwF-L9IrI97kq0XIM3nUPh0nVL1lpn6zmLqbI53DIMsDoijMxgJePLJfkLebRQRQV_HWWqwPYo0'"
                           }
                       }
                   }
