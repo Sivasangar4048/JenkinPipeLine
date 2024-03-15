@@ -36,6 +36,15 @@ pipeline {
             }
         }
 
+           stage('Distribute') {
+                      steps {
+                          script {
+                              // Send the build to Firebase App Distribution
+                              sh "firebase appdistribution:distribute app/build/outputs/apk/debug/app-debug.apk --app 1:484033308624:android:31abfd2405a664abf63bd5 --token '1//0gU6h2ZQdBmMeCgYIARAAGBASNwF-L9Ir79x9MDbkRSPYdC6BBAKdXWQI9EUNR6hFkPkk8EkG3YtD9rHQw5xMt7FMlUDjrcjVJq4'"
+                          }
+                      }
+                  }
+
     }
 
     post {
